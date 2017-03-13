@@ -1,0 +1,9 @@
+if which $1 > /dev/null; then
+    echo "rejected"
+    exit 1
+else
+    touch $1
+    chmod +x $1
+    exec /usr/bin/gedit "$1" &
+fi
+
