@@ -1,0 +1,14 @@
+cd /users/tutors/mhtest15/share/testsuite/ORahilly/06.Ballylongford
+
+for i in *jpg
+do
+if [[ $i == *"008"* ]]; then
+
+
+ djpeg  -scale 1/4 -bmp $i  > /users/case2/khaletk2/images/tmp.bmp
+
+ cjpeg  temp.bmp            > /users/case2/khaletk2/images/small.$i
+
+fi
+
+done
