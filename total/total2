@@ -1,0 +1,7 @@
+while read file
+do
+ if test -f $file
+ then
+  stat --printf="%s\n" $file 
+ fi
+done

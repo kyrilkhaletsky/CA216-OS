@@ -1,0 +1,3 @@
+grep img $1 | sed 's|^.*<img|<img|' | grep -v http | sed 's|.*src="||g' | sed 's|">.*$||g'  |
+
+total2 | total3
