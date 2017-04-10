@@ -1,9 +1,0 @@
-while read line
-do
- file=`echo "$line" | cut -f1 -d':' `
-  hit=`echo "$line" | cut -f2- -d':' `
- 
- echo "<a href=/users/tutors/mhtest15/share/shakespeare/$file > $file
-</a>: $hit
-<br>"
-done
