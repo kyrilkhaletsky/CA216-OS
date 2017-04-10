@@ -1,0 +1,9 @@
+url="http://www.dublincity.ie/dublintraffic/site16Camera75.jpg"
+file=$HOME/webcam.jpg
+
+while true
+do
+   wget -q -O - $url > $file
+   gsettings set org.gnome.desktop.background picture-uri "file://$file"
+   sleep 1000
+done
