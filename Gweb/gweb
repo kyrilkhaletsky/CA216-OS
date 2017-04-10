@@ -1,0 +1,7 @@
+exec > $HOME/tmp/gweb.output.html            
+
+cd /users/tutors/mhtest15/share/shakespeare
+
+echo '<pre>'
+grep -i "$1" */*html |    sed -e 's|<|\&lt;|g'   |   sed -e 's|>|\&gt;|g' | click-gweb
+echo '</pre>'
