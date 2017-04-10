@@ -1,0 +1,4 @@
+wget -q -O - https://api.flickr.com/services/feeds/photos_public.gne?tags=$1  > file.xml 
+cat file.xml | xpath '//content[@type="html"]'|    sed -e 's|&lt;|\<|g'   |   sed -e 's|&gt;|\>|g' | sed -e 's|&quot;|\"|g' > file.html
+
+firefox file.html &
